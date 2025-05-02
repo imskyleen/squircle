@@ -1,0 +1,271 @@
+---
+title: Border Smoothing
+description: Customize the border smoothing of a squircle.
+---
+
+import { TailwindTypeTable } from '@/components/docs/tailwind-type-table';
+
+## Variables
+
+<TailwindTypeTable 
+  type={{
+    'squircle-smooth-<length | number>': {
+      class: 'squircle-smooth-<length | number>',
+      styles: `--squircle-border-smoothing: <length | number>;`,
+    },
+    'squircle-smooth-xs': {
+      class: 'squircle-smooth-xs',
+      styles: `--squircle-border-smoothing: 0.2;`,
+    },
+    'squircle-smooth-sm': {
+      class: 'squircle-smooth-sm',
+      styles: `--squircle-border-smoothing: 0.4;`,
+    },
+    'squircle-smooth-md': {
+      class: 'squircle-smooth-md',
+      styles: `--squircle-border-smoothing: 0.6;`,
+    },
+    'squircle-smooth-lg': {
+      class: 'squircle-smooth-lg',
+      styles: `--squircle-border-smoothing: 0.8;`,
+    },
+    'squircle-smooth-xl': {
+      class: 'squircle-smooth-xl',
+      styles: `--squircle-border-smoothing: 1;`,
+    },
+    'squircle-smooth-r-<length | number>': {
+      class: 'squircle-smooth-r-<length | number>',
+      styles: `--squircle-border-top-right-smoothing: <length | number>;
+--squircle-border-bottom-right-smoothing: <length | number>;`,
+    },
+    'squircle-smooth-r-xs': {
+      class: 'squircle-smooth-r-xs',
+      styles: `--squircle-border-top-right-smoothing: 0.2;
+--squircle-border-bottom-right-smoothing: 0.2;`,
+    },
+    'squircle-smooth-r-sm': {
+      class: 'squircle-smooth-r-sm',
+      styles: `--squircle-border-top-right-smoothing: 0.4;
+--squircle-border-bottom-right-smoothing: 0.4;`,
+    },
+    'squircle-smooth-r-md': {
+      class: 'squircle-smooth-r-md',
+      styles: `--squircle-border-top-right-smoothing: 0.6;
+--squircle-border-bottom-right-smoothing: 0.6;`,
+    },
+    'squircle-smooth-r-lg': {
+      class: 'squircle-smooth-r-lg',
+      styles: `--squircle-border-top-right-smoothing: 0.8;
+--squircle-border-bottom-right-smoothing: 0.8;`,
+    },
+    'squircle-smooth-r-xl': {
+      class: 'squircle-smooth-r-xl',
+      styles: `--squircle-border-top-right-smoothing: 1;
+--squircle-border-bottom-right-smoothing: 1;`,
+    },
+    'squircle-smooth-l-<length | number>': {
+      class: 'squircle-smooth-l-<length | number>',
+      styles: `--squircle-border-top-left-smoothing: <length | number>;
+--squircle-border-bottom-left-smoothing: <length | number>;`,
+    },
+    'squircle-smooth-l-xs': {
+      class: 'squircle-smooth-l-xs',
+      styles: `--squircle-border-top-left-smoothing: 0.2;
+--squircle-border-bottom-left-smoothing: 0.2;`,
+    },
+    'squircle-smooth-l-sm': {
+      class: 'squircle-smooth-l-sm',
+      styles: `--squircle-border-top-left-smoothing: 0.4;
+--squircle-border-bottom-left-smoothing: 0.4;`,
+    },
+    'squircle-smooth-l-md': {
+      class: 'squircle-smooth-l-md',
+      styles: `--squircle-border-top-left-smoothing: 0.6;
+--squircle-border-bottom-left-smoothing: 0.6;`,
+    },  
+    'squircle-smooth-l-lg': {
+      class: 'squircle-smooth-l-lg',
+      styles: `--squircle-border-top-left-smoothing: 0.8;
+--squircle-border-bottom-left-smoothing: 0.8;`,
+    },
+    'squircle-smooth-l-xl': {
+      class: 'squircle-smooth-l-xl',
+      styles: `--squircle-border-top-left-smoothing: 1;
+--squircle-border-bottom-left-smoothing: 1;`,
+    },
+    'squircle-smooth-t-<length | number>': {
+      class: 'squircle-smooth-t-<length | number>',
+      styles: `--squircle-border-top-right-smoothing: <length | number>;
+--squircle-border-top-left-smoothing: <length | number>;`,
+    },
+    'squircle-smooth-t-xs': {
+      class: 'squircle-smooth-t-xs',
+      styles: `--squircle-border-top-right-smoothing: 0.2;
+--squircle-border-top-left-smoothing: 0.2;`,
+    },
+    'squircle-smooth-t-sm': {
+      class: 'squircle-smooth-t-sm',
+      styles: `--squircle-border-top-right-smoothing: 0.4;
+--squircle-border-top-left-smoothing: 0.4;`,
+    },
+    'squircle-smooth-t-md': {
+      class: 'squircle-smooth-t-md',
+      styles: `--squircle-border-top-right-smoothing: 0.6;
+--squircle-border-top-left-smoothing: 0.6;`,
+    },
+    'squircle-smooth-t-lg': {
+      class: 'squircle-smooth-t-lg',
+      styles: `--squircle-border-top-right-smoothing: 0.8;
+--squircle-border-top-left-smoothing: 0.8;`,
+    },
+    'squircle-smooth-t-xl': {
+      class: 'squircle-smooth-t-xl',
+      styles: `--squircle-border-top-right-smoothing: 1;
+--squircle-border-top-left-smoothing: 1;`,
+    },
+    'squircle-smooth-b-<length | number>': {
+      class: 'squircle-smooth-b-<length | number>',
+      styles: `--squircle-border-bottom-right-smoothing: <length | number>;
+--squircle-border-bottom-left-smoothing: <length | number>;`,
+    },
+    'squircle-smooth-b-xs': {
+      class: 'squircle-smooth-b-xs',
+      styles: `--squircle-border-bottom-right-smoothing: 0.2;
+--squircle-border-bottom-left-smoothing: 0.2;`,
+    },
+    'squircle-smooth-b-sm': {
+      class: 'squircle-smooth-b-sm',
+      styles: `--squircle-border-bottom-right-smoothing: 0.4;
+--squircle-border-bottom-left-smoothing: 0.4;`,
+    },
+    'squircle-smooth-b-md': {
+      class: 'squircle-smooth-b-md',
+      styles: `--squircle-border-bottom-right-smoothing: 0.6;
+--squircle-border-bottom-left-smoothing: 0.6;`,
+    },
+    'squircle-smooth-b-lg': {
+      class: 'squircle-smooth-b-lg',
+      styles: `--squircle-border-bottom-right-smoothing: 0.8;
+--squircle-border-bottom-left-smoothing: 0.8;`,
+    },
+    'squircle-smooth-b-xl': {
+      class: 'squircle-smooth-b-xl',
+      styles: `--squircle-border-bottom-right-smoothing: 1;
+--squircle-border-bottom-left-smoothing: 1;`,
+    },
+    'squircle-smooth-tr-<length | number>': {
+      class: 'squircle-smooth-tr-<length | number>',
+      styles: "--squircle-border-top-right-smoothing: <length | number>;",
+    },
+    'squircle-smooth-tr-xs': {
+      class: 'squircle-smooth-tr-xs',
+      styles: "--squircle-border-top-right-smoothing: 0.2;",
+    },
+    'squircle-smooth-tr-sm': {
+      class: 'squircle-smooth-tr-sm',
+      styles: "--squircle-border-top-right-smoothing: 0.4;",
+    },
+    'squircle-smooth-tr-md': {
+      class: 'squircle-smooth-tr-md',
+      styles: "--squircle-border-top-right-smoothing: 0.6;",
+    },
+    'squircle-smooth-tr-lg': {
+      class: 'squircle-smooth-tr-lg',
+      styles: "--squircle-border-top-right-smoothing: 0.8;",
+    },
+    'squircle-smooth-tr-xl': {
+      class: 'squircle-smooth-tr-xl',
+      styles: "--squircle-border-top-right-smoothing: 1;",
+    },
+    'squircle-smooth-tl-<length | number>': {
+      class: 'squircle-smooth-tl-<length | number>',
+      styles: "--squircle-border-top-left-smoothing: <length | number>;",
+    },
+    'squircle-smooth-tl-xs': {
+      class: 'squircle-smooth-tl-xs',
+      styles: "--squircle-border-top-left-smoothing: 0.2;",
+    },
+    'squircle-smooth-tl-sm': {
+      class: 'squircle-smooth-tl-sm',
+      styles: "--squircle-border-top-left-smoothing: 0.4;",
+    },
+    'squircle-smooth-tl-md': {
+      class: 'squircle-smooth-tl-md',
+      styles: "--squircle-border-top-left-smoothing: 0.6;",
+    },
+    'squircle-smooth-tl-lg': {
+      class: 'squircle-smooth-tl-lg',
+      styles: "--squircle-border-top-left-smoothing: 0.8;",
+    },
+    'squircle-smooth-tl-xl': {
+      class: 'squircle-smooth-tl-xl',
+      styles: "--squircle-border-top-left-smoothing: 1;",
+    },
+    'squircle-smooth-br-<length | number>': {
+      class: 'squircle-smooth-br-<length | number>',
+      styles: "--squircle-border-bottom-right-smoothing: <length | number>;",
+    },
+    'squircle-smooth-br-xs': {
+      class: 'squircle-smooth-br-xs',
+      styles: "--squircle-border-bottom-right-smoothing: 0.2;",
+    },
+    'squircle-smooth-br-sm': {
+      class: 'squircle-smooth-br-sm',
+      styles: "--squircle-border-bottom-right-smoothing: 0.4;",
+    },
+    'squircle-smooth-br-md': {
+      class: 'squircle-smooth-br-md',
+      styles: "--squircle-border-bottom-right-smoothing: 0.6;",
+    },
+    'squircle-smooth-br-lg': {
+      class: 'squircle-smooth-br-lg',
+      styles: "--squircle-border-bottom-right-smoothing: 0.8;",
+    },
+    'squircle-smooth-br-xl': {
+      class: 'squircle-smooth-br-xl',
+      styles: "--squircle-border-bottom-right-smoothing: 1;",
+    },
+    'squircle-smooth-bl-<length | number>': {
+      class: 'squircle-smooth-bl-<length | number>',
+      styles: "--squircle-border-bottom-left-smoothing: <length | number>;",
+    },
+    'squircle-smooth-bl-xs': {
+      class: 'squircle-smooth-bl-xs',
+      styles: "--squircle-border-bottom-left-smoothing: 0.2;",
+    },
+    'squircle-smooth-bl-sm': {
+      class: 'squircle-smooth-bl-sm',
+      styles: "--squircle-border-bottom-left-smoothing: 0.4;",
+    },
+    'squircle-smooth-bl-md': {
+      class: 'squircle-smooth-bl-md',
+      styles: "--squircle-border-bottom-left-smoothing: 0.6;",
+    },
+    'squircle-smooth-bl-lg': {
+      class: 'squircle-smooth-bl-lg',
+      styles: "--squircle-border-bottom-left-smoothing: 0.8;",
+    },
+    'squircle-smooth-bl-xl': {
+      class: 'squircle-smooth-bl-xl',
+      styles: "--squircle-border-bottom-left-smoothing: 1;",
+    },
+  }}
+/>
+
+## Usage
+
+```tsx
+<div className="squircle-smooth-lg" />
+```
+
+You can also customize individual corners.
+
+```tsx
+<div className="squircle-smooth-tl-lg squircle-smooth-br-sm" />
+```
+
+You can also use a custom smoothing value.
+
+```tsx
+<div className="squircle-smooth-0.5" />
+```

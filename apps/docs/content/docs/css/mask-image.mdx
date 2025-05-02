@@ -1,0 +1,39 @@
+---
+title: Mask Image
+description: Paint a squircle mask on an element.
+---
+
+import { TypeTable } from '@/components/docs/type-table';
+
+## Variables
+
+<TypeTable 
+  type={{
+    '--squircle-mode': {
+      description: 'The mode of the squircle.',
+      type: 'mask-image | background',
+    },
+  }}
+/>
+
+## Usage
+
+```css
+.squircle {
+  mask-image: paint(squircle);
+  --squircle-mode: mask-image;
+}
+```
+
+We advise you to use a no-repeat mask-image to avoid certain mini visual bugs that might occur on slow devices when resizing a squircle (only on browsers not compatible with `CSS.paintWorklet`).
+
+```css
+.squircle {
+  mask-image: paint(squircle);
+  --squircle-mode: mask-image;
+
+  @supports not (mask-image: paint(squircle)) {
+    mask-repeat: no-repeat;
+  }
+}
+```

@@ -1,0 +1,57 @@
+---
+title: Border Smoothing
+description: Customize the smoothing of a squircle.
+---
+
+import { TypeTable } from '@/components/docs/type-table';
+
+## Variables
+
+<TypeTable 
+  type={{
+    '--squircle-border-smoothing': {
+      description: 'The smoothing of the squircle (between 0.2 and 1).',
+      type: 'number',
+    },
+    '--squircle-border-top-left-smoothing': {
+      description: 'The smoothing of the top left corner of the squircle (between 0.2 and 1).',
+      type: 'number',
+    },
+    '--squircle-border-top-right-smoothing': {
+      description: 'The smoothing of the top right corner of the squircle (between 0.2 and 1).',
+      type: 'number',
+    },
+    '--squircle-border-bottom-right-smoothing': {
+      description: 'The smoothing of the bottom right corner of the squircle (between 0.2 and 1).',
+      type: 'number',
+    },
+    '--squircle-border-bottom-left-smoothing': {
+      description: 'The smoothing of the bottom left corner of the squircle (between 0.2 and 1).',
+      type: 'number',
+    },
+  }}
+/>
+
+<Callout type="info">
+  We recommend a value **between 0.2 and 1** for best results.
+</Callout>
+
+## Usage
+
+You can customize the smoothing of a squircle by using the `--squircle-border-smoothing` variable.
+
+```css
+.squircle {
+  --squircle-border-smoothing: 0.5;
+}
+```
+
+You can also customize the border smoothing of each corner:
+
+```css
+.squircle {
+  --squircle-border-top-left-smoothing: 0.2;
+  --squircle-border-top-right-smoothing: 0.4;
+  --squircle-border-bottom-right-smoothing: 0.6;
+  --squircle-border-bottom-left-smoothing: 0.8;
+}

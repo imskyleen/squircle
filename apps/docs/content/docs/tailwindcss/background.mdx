@@ -1,0 +1,42 @@
+---
+title: Background
+description: Paint a squircle background on an element.
+---
+
+import { TailwindTypeTable } from '@/components/docs/tailwind-type-table';
+
+## Variables
+
+<TailwindTypeTable 
+  type={{
+    'squircle': {
+      class: 'squircle',
+      styles: `background: paint(squircle);
+
+--squircle-border-radius: 0;
+--squircle-border-top-left-radius: 0;
+--squircle-border-top-right-radius: 0;
+--squircle-border-bottom-right-radius: 0;
+--squircle-border-bottom-left-radius: 0;
+--squircle-border-smoothing: 0.6;
+--squircle-border-top-left-smoothing: 0.6;
+--squircle-border-top-right-smoothing: 0.6;
+--squircle-border-bottom-right-smoothing: 0.6;
+--squircle-border-bottom-left-smoothing: 0.6;
+--squircle-border-width: 0;
+--squircle-border-color: unset;
+--squircle-background-color: unset;
+--squircle-mode: background;
+
+@supports not (background: paint(squircle)) {
+    background-repeat: no-repeat;
+}`,
+    },
+  }}
+/>
+
+## Usage
+
+```tsx
+<div className="squircle" />
+```

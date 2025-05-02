@@ -1,0 +1,24 @@
+{
+  "name": "@squircle/paint-polyfill",
+  "version": "1.0.5",
+  "source": "src/index.js",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "microbundle -f iife -o dist/index.js",
+    "dev": "concurrently serve \"microbundle watch -f iife\""
+  },
+  "keywords": [],
+  "author": "Google Chrome Developers <chromium-dev@google.com>",
+  "license": "Apache-2.0",
+  "description": "An improved CSS Paint Polyfill that support @layer and some other features",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "microbundle": "^0.15.1"
+  }
+}

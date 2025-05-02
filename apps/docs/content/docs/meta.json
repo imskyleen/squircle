@@ -1,0 +1,25 @@
+{
+  "title": "Squircle",
+  "root": true,
+  "pages": [
+    "index",
+    "getting-started",
+    "limitations",
+    "---CSS---",
+    "css/background",
+    "css/background-color",
+    "css/border-color",
+    "css/border-radius",
+    "css/border-smoothing",
+    "css/border-width",
+    "css/mask-image",
+    "---Tailwind CSS---",
+    "tailwindcss/background",
+    "tailwindcss/background-color",
+    "tailwindcss/border-color",
+    "tailwindcss/border-radius",
+    "tailwindcss/border-smoothing",
+    "tailwindcss/border-width",
+    "tailwindcss/mask-image"
+  ]
+}

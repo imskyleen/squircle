@@ -1,0 +1,41 @@
+---
+title: Background
+description: Paint a squircle background on an element.
+---
+
+import { TypeTable } from '@/components/docs/type-table';
+
+## Variables
+
+<TypeTable 
+  type={{
+    '--squircle-mode': {
+      description: 'The mode of the squircle.',
+      type: 'mask-image | background',
+    },
+  }}
+/>
+
+<Callout type="info">
+  The `background` mode is the default mode, so you don't need to set it explicitly here.
+</Callout>
+
+## Usage
+
+```css
+.squircle {
+  background: paint(squircle);
+}
+```
+
+We advise you to use a no-repeat background to avoid certain mini visual bugs that might occur on slow devices when resizing a squircle (only on browsers not compatible with `CSS.paintWorklet`).
+
+```css
+.squircle {
+  background: paint(squircle);
+
+  @supports not (background: paint(squircle)) {
+    background-repeat: no-repeat;
+  }
+}
+```

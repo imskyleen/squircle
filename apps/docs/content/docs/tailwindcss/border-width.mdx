@@ -1,0 +1,37 @@
+---
+title: Border Width
+description: Customize the border width of a squircle.
+---
+
+import { TailwindTypeTable } from '@/components/docs/tailwind-type-table';
+
+## Variables
+
+<TailwindTypeTable 
+  type={{
+    "squircle-border": {
+      class: 'squircle-border',
+      styles: `--squircle-border-width: 1px;`,
+    },
+    'squircle-border-<length | number>': {
+      class: 'squircle-border-<length | number>',
+      styles: `--squircle-border-width: <length | number>;`,
+    },
+  }}
+/>
+
+<Callout type="info">
+  Other values than px such as rem, em, vh, vw, etc. are not supported.
+</Callout>
+
+## Usage
+
+```tsx
+<div className="squircle-border" />
+```
+
+You can also customize the border width.
+
+```tsx
+<div className="squircle-border-4" />
+```

@@ -1,0 +1,436 @@
+@theme squircle {
+  --squircle-border-radius-none: 0;
+  --squircle-border-radius-xs: 2px;
+  --squircle-border-radius-sm: 4px;
+  --squircle-border-radius-md: 6px;
+  --squircle-border-radius-lg: 8px;
+  --squircle-border-radius-xl: 12px;
+  --squircle-border-radius-2xl: 16px;
+  --squircle-border-radius-3xl: 24px;
+  --squircle-border-radius-4xl: 32px;
+  --squircle-border-radius-5xl: 40px;
+  --squircle-border-radius-6xl: 50px;
+  --squircle-border-radius-7xl: 60px;
+  --squircle-border-radius-full: 9999px;
+
+  --squircle-border-smoothing-xs: 0.2;
+  --squircle-border-smoothing-sm: 0.4;
+  --squircle-border-smoothing-md: 0.6;
+  --squircle-border-smoothing-lg: 0.8;
+  --squircle-border-smoothing-xl: 1;
+}
+
+@utility squircle {
+  :where(&) {
+    background: paint(squircle);
+
+    --squircle-border-radius: 0;
+    --squircle-border-top-left-radius: 0;
+    --squircle-border-top-right-radius: 0;
+    --squircle-border-bottom-right-radius: 0;
+    --squircle-border-bottom-left-radius: 0;
+    --squircle-border-smoothing: 0.6;
+    --squircle-border-top-left-smoothing: 0.6;
+    --squircle-border-top-right-smoothing: 0.6;
+    --squircle-border-bottom-right-smoothing: 0.6;
+    --squircle-border-bottom-left-smoothing: 0.6;
+    --squircle-border-width: 0;
+    --squircle-border-color: unset;
+    --squircle-background-color: unset;
+    --squircle-mode: background;
+
+    @supports not (background: paint(squircle)) {
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@utility squircle-mask {
+  :where(&) {
+    mask-image: paint(squircle);
+
+    --squircle-border-radius: 0;
+    --squircle-border-top-left-radius: 0;
+    --squircle-border-top-right-radius: 0;
+    --squircle-border-bottom-right-radius: 0;
+    --squircle-border-bottom-left-radius: 0;
+    --squircle-border-smoothing: 0.6;
+    --squircle-border-top-left-smoothing: 0.6;
+    --squircle-border-top-right-smoothing: 0.6;
+    --squircle-border-bottom-right-smoothing: 0.6;
+    --squircle-border-bottom-left-smoothing: 0.6;
+    --squircle-border-width: 0;
+    --squircle-border-color: unset;
+    --squircle-background-color: unset;
+    --squircle-mode: mask-image;
+
+    @supports not (mask-image: paint(squircle)) {
+      mask-repeat: no-repeat;
+    }
+  }
+}
+
+@utility squircle-* {
+  --squircle-border-radius: --value(
+    --squircle-border-radius- *,
+    [length],
+    [number],
+    number
+  );
+  --squircle-border-top-left-radius: --value(
+    --squircle-border-radius- *,
+    [length],
+    [number],
+    number
+  );
+  --squircle-border-top-right-radius: --value(
+    --squircle-border-radius- *,
+    [length],
+    [number],
+    number
+  );
+  --squircle-border-bottom-right-radius: --value(
+    --squircle-border-radius- *,
+    [length],
+    [number],
+    number
+  );
+  --squircle-border-bottom-left-radius: --value(
+    --squircle-border-radius- *,
+    [length],
+    [number],
+    number
+  );
+
+  --squircle-opacity: calc(--modifier(integer) * 1%);
+  --squircle-background-color: --alpha(
+    --value(--color- *, [color], 'transparent') / var(--squircle-opacity, 100%)
+  );
+
+  @supports not (background: paint(squircle)) {
+    border-radius: --value(
+      --squircle-border-radius- *,
+      [length],
+      [number],
+      number
+    );
+  }
+}
+
+@utility squircle-r-* {
+  --squircle-border-top-right-radius: --value(
+    --squircle-border-radius- *,
+    [length],
+    [number],
+    number
+  );
+  --squircle-border-bottom-right-radius: --value(
+    --squircle-border-radius- *,
+    [length],
+    [number],
+    number
+  );
+
+  @supports not (background: paint(squircle)) {
+    border-top-right-radius: --value(
+      --squircle-border-radius- *,
+      [length],
+      [number],
+      number
+    );
+    border-bottom-right-radius: --value(
+      --squircle-border-radius- *,
+      [length],
+      [number],
+      number
+    );
+  }
+}
+
+@utility squircle-l-* {
+  --squircle-border-top-left-radius: --value(
+    --squircle-border-radius- *,
+    [length],
+    [number],
+    number
+  );
+  --squircle-border-bottom-left-radius: --value(
+    --squircle-border-radius- *,
+    [length],
+    [number],
+    number
+  );
+
+  @supports not (background: paint(squircle)) {
+    border-top-left-radius: --value(
+      --squircle-border-radius- *,
+      [length],
+      [number],
+      number
+    );
+    border-bottom-left-radius: --value(
+      --squircle-border-radius- *,
+      [length],
+      [number],
+      number
+    );
+  }
+}
+
+@utility squircle-t-* {
+  --squircle-border-top-right-radius: --value(
+    --squircle-border-radius- *,
+    [length],
+    [number],
+    number
+  );
+  --squircle-border-top-left-radius: --value(
+    --squircle-border-radius- *,
+    [length],
+    [number],
+    number
+  );
+
+  @supports not (background: paint(squircle)) {
+    border-top-right-radius: --value(
+      --squircle-border-radius- *,
+      [length],
+      [number],
+      number
+    );
+    border-top-left-radius: --value(
+      --squircle-border-radius- *,
+      [length],
+      [number],
+      number
+    );
+  }
+}
+
+@utility squircle-b-* {
+  --squircle-border-bottom-right-radius: --value(
+    --squircle-border-radius- *,
+    [length],
+    [number],
+    number
+  );
+  --squircle-border-bottom-left-radius: --value(
+    --squircle-border-radius- *,
+    [length],
+    [number],
+    number
+  );
+
+  @supports not (background: paint(squircle)) {
+    border-bottom-right-radius: --value(
+      --squircle-border-radius- *,
+      [length],
+      [number],
+      number
+    );
+    border-bottom-left-radius: --value(
+      --squircle-border-radius- *,
+      [length],
+      [number],
+      number
+    );
+  }
+}
+
+@utility squircle-tr-* {
+  --squircle-border-top-right-radius: --value(
+    --squircle-border-radius- *,
+    [length],
+    [number],
+    number
+  );
+
+  @supports not (background: paint(squircle)) {
+    border-top-right-radius: --value(
+      --squircle-border-radius- *,
+      [length],
+      [number],
+      number
+    );
+  }
+}
+
+@utility squircle-tl-* {
+  --squircle-border-top-left-radius: --value(
+    --squircle-border-radius- *,
+    [length],
+    [number],
+    number
+  );
+
+  @supports not (background: paint(squircle)) {
+    border-top-left-radius: --value(
+      --squircle-border-radius- *,
+      [length],
+      [number],
+      number
+    );
+  }
+}
+
+@utility squircle-br-* {
+  --squircle-border-bottom-right-radius: --value(
+    --squircle-border-radius- *,
+    [length],
+    [number],
+    number
+  );
+
+  @supports not (background: paint(squircle)) {
+    border-bottom-right-radius: --value(
+      --squircle-border-radius- *,
+      [length],
+      [number],
+      number
+    );
+  }
+}
+
+@utility squircle-bl-* {
+  --squircle-border-bottom-left-radius: --value(
+    --squircle-border-radius- *,
+    [length],
+    [number],
+    number
+  );
+
+  @supports not (background: paint(squircle)) {
+    border-bottom-left-radius: --value(
+      --squircle-border-radius- *,
+      [length],
+      [number],
+      number
+    );
+  }
+}
+
+@utility squircle-smooth-* {
+  --squircle-border-smoothing: --value(
+    --squircle-border-smoothing- *,
+    [number],
+    number
+  );
+  --squircle-border-top-left-smoothing: --value(
+    --squircle-border-smoothing- *,
+    [number],
+    number
+  );
+  --squircle-border-top-right-smoothing: --value(
+    --squircle-border-smoothing- *,
+    [number],
+    number
+  );
+  --squircle-border-bottom-right-smoothing: --value(
+    --squircle-border-smoothing- *,
+    [number],
+    number
+  );
+  --squircle-border-bottom-left-smoothing: --value(
+    --squircle-border-smoothing- *,
+    [number],
+    number
+  );
+}
+
+@utility squircle-smooth-r-* {
+  --squircle-border-top-right-smoothing: --value(
+    --squircle-border-smoothing- *,
+    [number],
+    number
+  );
+  --squircle-border-bottom-right-smoothing: --value(
+    --squircle-border-smoothing- *,
+    [number],
+    number
+  );
+}
+
+@utility squircle-smooth-l-* {
+  --squircle-border-top-left-smoothing: --value(
+    --squircle-border-smoothing- *,
+    [number],
+    number
+  );
+  --squircle-border-bottom-left-smoothing: --value(
+    --squircle-border-smoothing- *,
+    [number],
+    number
+  );
+}
+
+@utility squircle-smooth-t-* {
+  --squircle-border-top-right-smoothing: --value(
+    --squircle-border-smoothing- *,
+    [number],
+    number
+  );
+  --squircle-border-top-left-smoothing: --value(
+    --squircle-border-smoothing- *,
+    [number],
+    number
+  );
+}
+
+@utility squircle-smooth-b-* {
+  --squircle-border-bottom-right-smoothing: --value(
+    --squircle-border-smoothing- *,
+    [number],
+    number
+  );
+  --squircle-border-bottom-left-smoothing: --value(
+    --squircle-border-smoothing- *,
+    [number],
+    number
+  );
+}
+
+@utility squircle-smooth-tr-* {
+  --squircle-border-top-right-smoothing: --value(
+    --squircle-border-smoothing- *,
+    [number],
+    number
+  );
+}
+
+@utility squircle-smooth-tl-* {
+  --squircle-border-top-left-smoothing: --value(
+    --squircle-border-smoothing- *,
+    [number],
+    number
+  );
+}
+
+@utility squircle-smooth-br-* {
+  --squircle-border-bottom-right-smoothing: --value(
+    --squircle-border-smoothing- *,
+    [number],
+    number
+  );
+}
+
+@utility squircle-smooth-bl-* {
+  --squircle-border-bottom-left-smoothing: --value(
+    --squircle-border-smoothing- *,
+    [number],
+    number
+  );
+}
+
+@utility squircle-border {
+  --squircle-border-width: 1px;
+}
+
+@utility squircle-border-* {
+  --squircle-border-width: --value([length], [number], number);
+
+  --squircle-border-opacity: calc(--modifier(integer) * 1%);
+  --squircle-border-color: --alpha(
+    --value(--color- *, [color], 'transparent') /
+      var(--squircle-border-opacity, 100%)
+  );
+}

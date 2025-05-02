@@ -1,0 +1,123 @@
+---
+title: Getting Started
+---
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { Button } from '@/components/ui/button';
+import { ThumbsUp } from 'lucide-react';
+
+## Installation
+
+<Tabs items={['npm', 'pnpm', 'yarn', 'bun']}>
+  <Tab value="npm">
+    ```bash 
+    npm install @squircle/core @squircle/paint-polyfill
+    ```
+  </Tab>
+  <Tab value="pnpm">
+    ```bash
+    pnpm add @squircle/core @squircle/paint-polyfill
+    ```
+  </Tab>
+  <Tab value="yarn">
+    ```bash
+    yarn add @squircle/core @squircle/paint-polyfill
+    ```
+  </Tab>
+  <Tab value="bun">
+    ```bash
+    bun add @squircle/core @squircle/paint-polyfill
+    ```
+  </Tab>
+</Tabs>
+
+## Import
+
+```ts
+import { init } from '@squircle/core';
+```
+
+## Initialize
+
+```ts
+init();
+```
+
+## Initialize in React
+
+```tsx title="squircle-provider.tsx"
+'use client';
+
+import * as React from 'react';
+import { init } from '@squircle/core';
+
+export function SquircleProvider({ children }: { children: React.ReactNode }) {
+  React.useEffect(() => void init(), []);
+  return children;
+}
+```
+
+Then use the `SquircleProvider` component to wrap your app.
+
+```tsx
+<SquircleProvider>
+  <App />
+</SquircleProvider>
+```
+
+## Usage
+
+### CSS
+
+```css
+.squircle {
+  background: paint(squircle);
+  --squircle-background-color: red;
+  --squircle-border-color: blue;
+  --squircle-border-width: 10px;
+  --squircle-border-radius: 30px;
+}
+```
+
+### Tailwind CSS
+
+<Callout type="info">
+  Only support Tailwind >= 4.0.
+</Callout>
+
+#### Install
+
+<Tabs items={['npm', 'pnpm', 'yarn', 'bun']}>
+  <Tab value="npm">
+    ```bash 
+    npm install @squircle/tailwindcss
+    ```
+  </Tab>
+  <Tab value="pnpm">
+    ```bash
+    pnpm add @squircle/tailwindcss
+    ```
+  </Tab>
+  <Tab value="yarn">
+    ```bash
+    yarn add @squircle/tailwindcss
+    ```
+  </Tab>
+  <Tab value="bun">
+    ```bash
+    bun add @squircle/tailwindcss
+    ```
+  </Tab>
+</Tabs>
+
+#### Import
+
+```css title="globals.css"
+@import '@squircle/tailwindcss';
+```
+
+#### Usage
+
+```html
+<div class="squircle squircle-2xl squircle-teal-400" />
+```

@@ -1,0 +1,45 @@
+---
+title: Limitations
+---
+
+While Squircle is designed to work seamlessly across all modern browsers, there are a few limitations to keep in mind:
+
+- Squircle uses a custom polyfill, `@squircle/paint-polyfill`, a heavily improved fork of `css-paint-polyfill`.
+  This polyfill brings CSS Houdini compatibility to browsers that do not support `CSS.paintWorklet` natively.
+
+- However, **very old browsers**, such as **Internet Explorer** and **some early versions of Edge**, are not supported. These browsers do not support the necessary underlying APIs to run the polyfill reliably.
+  _(Note: Internet Explorer is not officially tested and should be considered unsupported.)_
+
+- In browsers without native CSS Houdini support (thus relying on `@squircle/paint-polyfill`), there may be **minor performance overhead**.
+  This is because the polyfill **actively listens** to style changes and dynamically **replaces paint operations** in the DOM, which can slightly impact performance, especially in large or highly dynamic applications.
+
+<Callout type="warn">
+  Additionally, when using animation libraries such as [Motion](https://motion.dev/) in browsers that do not support `CSS.paintWorklet` (**Firefox** and **Safari**), performance issues may become more noticeable.
+  Since the polyfill relies on a MutationObserver to detect and respond to style changes, animations that rapidly and repeatedly update styles can trigger frequent DOM updates, potentially resulting in less smooth animations.
+  We are currently exploring solutions to mitigate this impact.
+</Callout>
+
+In fully CSS Houdini-compatible browsers, Squircle has near-zero performance impact and runs natively without any emulation layer.
+
+## Browser Support
+
+Squircle is designed to work seamlessly across all modern browsers:
+
+| Browser | Native support | With polyfill |
+|:--------|:-------:|:-------:|
+| **Chrome** | ✅ 65+ | ✅ |
+| **Edge** | ✅ 79+ | ✅ |
+| **Firefox** | ❌  | ☑️ |
+| **Opera** | ✅ 52+ | ✅ |
+| **Safari** | ❌  | ☑️ |
+| **Chrome Android** | ✅ 65+ | ✅ |
+| **Firefox for Android** | ❌  | ☑️ |
+| **Opera Android** | ✅ 47+ | ✅ |
+| **Safari on iOS** | ❌   | ☑️ |
+| **Samsung Internet** | ✅ 9+ | ✅ |
+| **WebView Android** | ✅ 65+ | ✅ |
+| **Internet Explorer** | ❌  | ❌  |
+
+- ✅: Supported natively
+- ☑️: Supported with `@squircle/paint-polyfill` ([see limitations](#limitations))
+- ❌: Not supported

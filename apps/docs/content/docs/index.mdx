@@ -1,0 +1,45 @@
+---
+title: Introduction
+---
+
+## Why Squircle?
+
+Creating customizable squircles with CSS can quickly become complex. When I searched for a simple, modern solution that could be easily integrated — especially with Tailwind CSS — I couldn't find any plugin that combined:
+
+- true ease of use,
+- a high level of customization,
+- broad browser compatibility,
+- active maintenance and modern best practices.
+
+That's why **Squircle** was born.
+
+I combined and improved the best ideas and existing projects to offer a powerful yet accessible solution. Squircle is based on:
+
+- CSS Houdini, inspired by [Pavel Laptev](https://github.com/PavelLaptev/css-houdini-squircle)'s work, which I used as a foundation to build a more flexible and highly customizable solution.
+- [css-paint-polyfill](https://github.com/GoogleChromeLabs/css-paint-polyfill) by Google Chrome Labs, which I forked and extended to:
+  - support CSS `@layer` usage,
+  - enable smooth property animations,
+  - handle dynamic theme switching (light/dark mode).
+  - some optimizations for performance and browser compatibility.
+
+Finally, I developed a dedicated Tailwind CSS plugin, designed with the latest best practices from Tailwind 4, to make Squircle easy to use in any modern project.
+
+Squircle is the ideal solution to create smooth, aesthetic, and highly customizable squircles — with minimal setup and maximum flexibility.
+
+## How Squircle Works
+
+Squircle leverages **CSS Houdini** and the `CSS.paintWorklet` API to create fully customizable squircles directly in the browser.
+
+To ensure broad browser compatibility, Squircle integrates an improved version of [css-paint-polyfill](https://github.com/GoogleChromeLabs/css-paint-polyfill), which I forked and enhanced. This polyfill allows Squircle to work seamlessly across all modern browsers.
+
+To initialize Squircle, you need to call an `init()` function in your code. This function registers the `CSS.paintWorklet` module and ensures that squircles can be rendered even if the browser doesn't support Houdini natively.
+
+Once initialized, customization is fully handled through `CSS variables`. You can easily control the shape, size, smoothing, colors, and other properties directly in your styles.
+
+Since Squircle uses a **paint** operation under the hood, it essentially draws the squircle on a canvas.
+You can use this squircle rendering in two main ways:
+
+- As a **background** (`background: paint(squircle)`),
+- As a **mask-image** (`mask-image: paint(squircle)`).
+
+This approach allows you to create complex squircles that would be difficult or impossible to achieve with traditional CSS properties.

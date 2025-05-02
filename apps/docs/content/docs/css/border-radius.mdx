@@ -1,0 +1,66 @@
+---
+title: Border Radius
+description: Customize the radius of a squircle.
+---
+
+import { TypeTable } from '@/components/docs/type-table';
+
+## Variables
+
+<TypeTable 
+  type={{
+    '--squircle-border-radius': {
+      description: 'The radius of the squircle.',
+      type: 'number | px',
+    },
+    '--squircle-border-top-left-radius': {
+      description: 'The radius of the top left corner of the squircle.',
+      type: 'number | px',
+    },
+    '--squircle-border-top-right-radius': {
+      description: 'The radius of the top right corner of the squircle.',
+      type: 'number | px',
+    },
+    '--squircle-border-bottom-right-radius': {
+      description: 'The radius of the bottom right corner of the squircle.',
+      type: 'number | px',
+    },
+    '--squircle-border-bottom-left-radius': {
+      description: 'The radius of the bottom left corner of the squircle.',
+      type: 'number | px',
+    },
+  }}
+/>
+
+## Usage
+
+You can customize the border radius of a squircle by using the `--squircle-border-radius` variable.
+
+```css
+.squircle {
+  --squircle-border-radius: 10px;
+}
+```
+
+The value can be in **px** or a **simple number**:
+
+```css
+.squircle {
+  --squircle-border-radius: 10;
+}
+```
+
+<Callout type="info">
+  Other values like rem, em, vh, vw, etc. are not supported.
+</Callout>
+
+You can also customize the border radius of each corner:
+
+```css
+.squircle {
+  --squircle-border-top-left-radius: 5px;
+  --squircle-border-top-right-radius: 10px;
+  --squircle-border-bottom-right-radius: 15px;
+  --squircle-border-bottom-left-radius: 20px;
+}
+```

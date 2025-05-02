@@ -1,0 +1,16 @@
+{
+  "name": "@squircle/tailwindcss",
+  "version": "1.0.6",
+  "main": "./index.css",
+  "exports": {
+    ".": "./index.css"
+  },
+  "keywords": [
+    "tailwindcss",
+    "squircle"
+  ],
+  "homepage": "https://squircle.skyleen.dev",
+  "author": "Skyleen",
+  "description": "TailwindCSS plugin for Squircle",
+  "license": "MIT"
+}

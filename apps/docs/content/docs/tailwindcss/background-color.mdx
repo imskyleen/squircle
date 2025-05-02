@@ -1,0 +1,37 @@
+---
+title: Background Color
+description: Customize the background color of a squircle.
+---
+
+import { TailwindTypeTable } from '@/components/docs/tailwind-type-table';
+
+## Variables
+
+<TailwindTypeTable 
+  type={{
+    'squircle-<color>': {
+      class: 'squircle-<color>',
+      styles: `--squircle-background-color: <color>;`,
+    },
+  }}
+/>
+
+## Usage
+
+You can use a tailwind color class to customize the background color of a squircle.
+
+```tsx
+<div className="squircle-red-500" />
+```
+
+Or you can use a custom color.
+
+```tsx
+<div className="squircle-[#2dd4bf]" />
+```
+
+You can also customize the background color opacity.
+
+```tsx
+<div className="squircle-red-500/50" />
+```

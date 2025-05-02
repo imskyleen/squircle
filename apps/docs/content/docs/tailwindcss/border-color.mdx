@@ -1,0 +1,37 @@
+---
+title: Border Color
+description: Customize the border color of a squircle.
+---
+
+import { TailwindTypeTable } from '@/components/docs/tailwind-type-table';
+
+## Variables
+
+<TailwindTypeTable 
+  type={{
+    'squircle-border-<color>': {
+      class: 'squircle-border-<color>',
+      styles: `--squircle-border-color: <color>;`,
+    },
+  }}
+/>
+
+## Usage
+
+You can use a tailwind color class to customize the border color of a squircle.
+
+```tsx
+<div className="squircle-border-red-500" />
+```
+
+Or you can use a custom color.
+
+```tsx
+<div className="squircle-border-[#2dd4bf]" />
+```
+
+You can also customize the background color opacity.
+
+```tsx
+<div className="squircle-border-red-500/50" />
+```

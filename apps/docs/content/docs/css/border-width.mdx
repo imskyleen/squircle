@@ -1,0 +1,39 @@
+---
+title: Border Width
+description: Customize the width of the border of a squircle.
+---
+
+import { TypeTable } from '@/components/docs/type-table';
+
+## Variables
+
+<TypeTable 
+  type={{
+    '--squircle-border-width': {
+      description: 'The width of the border of the squircle.',
+      type: 'number | px',
+    },
+  }}
+/>
+
+<Callout type="info">
+  Other values like rem, em, vh, vw, etc. are not supported.
+</Callout>
+
+## Usage
+
+You can customize the width of the border of a squircle by using the `--squircle-border-width` variable.
+
+```css
+.squircle {
+  --squircle-border-width: 2px;
+}
+```
+
+The value can be in **px** or a **simple number**:
+
+```css
+.squircle {
+  --squircle-border-width: 2;
+}
+```

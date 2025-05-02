@@ -1,0 +1,595 @@
+---
+title: Border Radius
+description: Customize the border radius of a squircle.
+---
+
+import { TailwindTypeTable } from '@/components/docs/tailwind-type-table';
+
+## Variables
+
+<TailwindTypeTable 
+  type={{
+    'squircle-<length | number>': {
+      class: 'squircle-<length | number>',
+      styles: `--squircle-border-radius: <length | number>;`,
+    },
+    'squircle-none': {
+      class: 'squircle-none',
+      styles: `--squircle-border-radius: 0;`,
+    },
+    'squircle-xs': {
+      class: 'squircle-xs',
+      styles: `--squircle-border-radius: 2px;`,
+    },
+    'squircle-sm': {
+      class: 'squircle-sm',
+      styles: `--squircle-border-radius: 4px;`,
+    },
+    'squircle-md': {
+      class: 'squircle-md',
+      styles: `--squircle-border-radius: 6px;`,
+    },
+    'squircle-lg': {
+      class: 'squircle-lg',
+      styles: `--squircle-border-radius: 8px;`,
+    },
+    'squircle-xl': {
+      class: 'squircle-xl',
+      styles: `--squircle-border-radius: 12px;`,
+    },
+    'squircle-2xl': {
+      class: 'squircle-2xl',
+      styles: `--squircle-border-radius: 16px;`,
+    },
+    'squircle-3xl': {
+      class: 'squircle-3xl',
+      styles: `--squircle-border-radius: 24px;`,
+    },
+    'squircle-4xl': {
+      class: 'squircle-4xl',
+      styles: `--squircle-border-radius: 32px;`,
+    },
+    'squircle-5xl': {
+      class: 'squircle-5xl',
+      styles: `--squircle-border-radius: 40px;`,
+    },
+    'squircle-6xl': {
+      class: 'squircle-6xl',
+      styles: `--squircle-border-radius: 50px;`,
+    },
+    'squircle-7xl': {
+      class: 'squircle-7xl',
+      styles: `--squircle-border-radius: 60px;`,
+    },
+    'squircle-full': {
+      class: 'squircle-full',
+      styles: `--squircle-border-radius: 9999px;`,
+    },
+    "squircle-r-<length | number>": {
+      class: "squircle-r-<length | number>",
+      styles: `--squircle-border-top-right-radius: <length | number>;
+--squircle-border-bottom-right-radius: <length | number>;`,
+    },
+    "squircle-r-none": {
+      class: "squircle-r-none",
+      styles: `--squircle-border-top-right-radius: 0;
+--squircle-border-bottom-right-radius: 0;`,
+    },
+    "squircle-r-xs": {
+      class: "squircle-r-xs",
+      styles: `--squircle-border-top-right-radius: 2px;
+--squircle-border-bottom-right-radius: 2px;`,
+    },
+    "squircle-r-sm": {
+      class: "squircle-r-sm",
+      styles: `--squircle-border-top-right-radius: 4px;
+--squircle-border-bottom-right-radius: 4px;`,
+    },
+    "squircle-r-md": {
+      class: "squircle-r-md",
+      styles: `--squircle-border-top-right-radius: 6px;
+--squircle-border-bottom-right-radius: 6px;`,
+    },
+    "squircle-r-lg": {
+      class: "squircle-r-lg",
+      styles: `--squircle-border-top-right-radius: 8px;
+--squircle-border-bottom-right-radius: 8px;`,
+    },
+    "squircle-r-xl": {
+      class: "squircle-r-xl",
+      styles: `--squircle-border-top-right-radius: 12px;
+--squircle-border-bottom-right-radius: 12px;`,
+    },
+    "squircle-r-2xl": {
+      class: "squircle-r-2xl",
+      styles: `--squircle-border-top-right-radius: 16px;
+--squircle-border-bottom-right-radius: 16px;`,
+    },
+    "squircle-r-3xl": {
+      class: "squircle-r-3xl",
+      styles: `--squircle-border-top-right-radius: 24px;
+--squircle-border-bottom-right-radius: 24px;`,
+    },
+    "squircle-r-4xl": {
+      class: "squircle-r-4xl",
+      styles: `--squircle-border-top-right-radius: 32px;
+--squircle-border-bottom-right-radius: 32px;`,
+    },
+    "squircle-r-5xl": {
+      class: "squircle-r-5xl",
+      styles: `--squircle-border-top-right-radius: 40px;
+--squircle-border-bottom-right-radius: 40px;`,
+    },
+    "squircle-r-6xl": {
+      class: "squircle-r-6xl",
+      styles: `--squircle-border-top-right-radius: 50px;
+--squircle-border-bottom-right-radius: 50px;`,
+    },
+    "squircle-r-7xl": {
+      class: "squircle-r-7xl",
+      styles: `--squircle-border-top-right-radius: 60px;
+--squircle-border-bottom-right-radius: 60px;`,
+    },
+    "squircle-r-full": {
+      class: "squircle-r-full",
+      styles: `--squircle-border-top-right-radius: 9999px;
+--squircle-border-bottom-right-radius: 9999px;`,
+    },
+    "squircle-l-<length | number>": {
+      class: "squircle-l-<length | number>",
+      styles: `--squircle-border-top-left-radius: <length | number>;
+--squircle-border-bottom-left-radius: <length | number>;`,
+    },
+    "squircle-l-none": {
+      class: "squircle-l-none",
+      styles: `--squircle-border-top-left-radius: 0;
+--squircle-border-bottom-left-radius: 0;`,
+    },
+    "squircle-l-xs": {
+      class: "squircle-l-xs",
+      styles: `--squircle-border-top-left-radius: 2px;
+--squircle-border-bottom-left-radius: 2px;`,
+    },
+    "squircle-l-sm": {
+      class: "squircle-l-sm",
+      styles: `--squircle-border-top-left-radius: 4px;
+--squircle-border-bottom-left-radius: 4px;`,
+    },
+    "squircle-l-md": {
+      class: "squircle-l-md",
+      styles: `--squircle-border-top-left-radius: 6px;
+--squircle-border-bottom-left-radius: 6px;`,
+    },
+    "squircle-l-lg": {
+      class: "squircle-l-lg",
+      styles: `--squircle-border-top-left-radius: 8px;
+--squircle-border-bottom-left-radius: 8px;`,
+    },
+    "squircle-l-xl": {
+      class: "squircle-l-xl",
+      styles: `--squircle-border-top-left-radius: 12px;
+--squircle-border-bottom-left-radius: 12px;`,
+    },
+    "squircle-l-2xl": {
+      class: "squircle-l-2xl",
+      styles: `--squircle-border-top-left-radius: 16px;
+--squircle-border-bottom-left-radius: 16px;`,
+    },
+    "squircle-l-3xl": {
+      class: "squircle-l-3xl",
+      styles: `--squircle-border-top-left-radius: 24px;
+--squircle-border-bottom-left-radius: 24px;`,
+    },
+    "squircle-l-4xl": {
+      class: "squircle-l-4xl",
+      styles: `--squircle-border-top-left-radius: 32px;
+--squircle-border-bottom-left-radius: 32px;`,
+    },
+    "squircle-l-5xl": {
+      class: "squircle-l-5xl",
+      styles: `--squircle-border-top-left-radius: 40px;
+--squircle-border-bottom-left-radius: 40px;`,
+    },
+    "squircle-l-6xl": {
+      class: "squircle-l-6xl",
+      styles: `--squircle-border-top-left-radius: 50px;
+--squircle-border-bottom-left-radius: 50px;`,
+    },
+    "squircle-l-7xl": {
+      class: "squircle-l-7xl",
+      styles: `--squircle-border-top-left-radius: 60px;
+--squircle-border-bottom-left-radius: 60px;`,
+    },
+    "squircle-l-full": {
+      class: "squircle-l-full",
+      styles: `--squircle-border-top-left-radius: 9999px;
+--squircle-border-bottom-left-radius: 9999px;`,
+    },
+    "squircle-t-<length | number>": {
+      class: "squircle-t-<length | number>",
+      styles: `--squircle-border-top-right-radius: <length | number>;
+--squircle-border-top-left-radius: <length | number>;`,
+    },
+    "squircle-t-none": {
+      class: "squircle-t-none",
+      styles: `--squircle-border-top-right-radius: 0;
+--squircle-border-top-left-radius: 0;`,
+    },
+    "squircle-t-xs": {
+      class: "squircle-t-xs",
+      styles: `--squircle-border-top-right-radius: 2px;
+--squircle-border-top-left-radius: 2px;`,
+    },
+    "squircle-t-sm": {
+      class: "squircle-t-sm",
+      styles: `--squircle-border-top-right-radius: 4px;
+--squircle-border-top-left-radius: 4px;`,
+    },
+    "squircle-t-md": {
+      class: "squircle-t-md",
+      styles: `--squircle-border-top-right-radius: 6px;
+--squircle-border-top-left-radius: 6px;`,
+    },
+    "squircle-t-lg": {
+      class: "squircle-t-lg",
+      styles: `--squircle-border-top-right-radius: 8px;
+--squircle-border-top-left-radius: 8px;`,
+    },
+    "squircle-t-xl": {
+      class: "squircle-t-xl",
+      styles: `--squircle-border-top-right-radius: 12px;
+--squircle-border-top-left-radius: 12px;`,
+    },
+    "squircle-t-2xl": {
+      class: "squircle-t-2xl",
+      styles: `--squircle-border-top-right-radius: 16px;
+--squircle-border-top-left-radius: 16px;`,
+    },
+    "squircle-t-3xl": {
+      class: "squircle-t-3xl",
+      styles: `--squircle-border-top-right-radius: 24px;
+--squircle-border-top-left-radius: 24px;`,
+    },
+    "squircle-t-4xl": {
+      class: "squircle-t-4xl",
+      styles: `--squircle-border-top-right-radius: 32px;
+--squircle-border-top-left-radius: 32px;`,
+    },
+    "squircle-t-5xl": {
+      class: "squircle-t-5xl",
+      styles: `--squircle-border-top-right-radius: 40px;
+--squircle-border-top-left-radius: 40px;`,
+    },
+    "squircle-t-6xl": {
+      class: "squircle-t-6xl",
+      styles: `--squircle-border-top-right-radius: 50px;
+--squircle-border-top-left-radius: 50px;`,
+    },
+    "squircle-t-7xl": {
+      class: "squircle-t-7xl",
+      styles: `--squircle-border-top-right-radius: 60px;
+--squircle-border-top-left-radius: 60px;`,
+    },
+    "squircle-t-full": {
+      class: "squircle-t-full",
+      styles: `--squircle-border-top-right-radius: 9999px;
+--squircle-border-top-left-radius: 9999px;`,
+    },
+    "squircle-b-<length | number>": {
+      class: "squircle-b-<length | number>",
+      styles: `--squircle-border-bottom-right-radius: <length | number>;
+--squircle-border-bottom-left-radius: <length | number>;`,
+    },
+    "squircle-b-none": {
+      class: "squircle-b-none",
+      styles: `--squircle-border-bottom-right-radius: 0;
+--squircle-border-bottom-left-radius: 0;`,
+    },
+    "squircle-b-xs": {
+      class: "squircle-b-xs",
+      styles: `--squircle-border-bottom-right-radius: 2px;
+--squircle-border-bottom-left-radius: 2px;`,
+    },
+    "squircle-b-sm": {
+      class: "squircle-b-sm",
+      styles: `--squircle-border-bottom-right-radius: 4px;
+--squircle-border-bottom-left-radius: 4px;`,
+    },
+    "squircle-b-md": {
+      class: "squircle-b-md",
+      styles: `--squircle-border-bottom-right-radius: 6px;
+--squircle-border-bottom-left-radius: 6px;`,
+    },
+    "squircle-b-lg": {
+      class: "squircle-b-lg",
+      styles: `--squircle-border-bottom-right-radius: 8px;
+--squircle-border-bottom-left-radius: 8px;`,
+    },
+    "squircle-b-xl": {
+      class: "squircle-b-xl",
+      styles: `--squircle-border-bottom-right-radius: 12px;
+--squircle-border-bottom-left-radius: 12px;`,
+    },
+    "squircle-b-2xl": {
+      class: "squircle-b-2xl",
+      styles: `--squircle-border-bottom-right-radius: 16px;
+--squircle-border-bottom-left-radius: 16px;`,
+    },
+    "squircle-b-3xl": {
+      class: "squircle-b-3xl",
+      styles: `--squircle-border-bottom-right-radius: 24px;
+--squircle-border-bottom-left-radius: 24px;`,
+    },
+    "squircle-b-4xl": {
+      class: "squircle-b-4xl",
+      styles: `--squircle-border-bottom-right-radius: 32px;
+--squircle-border-bottom-left-radius: 32px;`,
+    },
+    "squircle-b-5xl": {
+      class: "squircle-b-5xl",
+      styles: `--squircle-border-bottom-right-radius: 40px;
+--squircle-border-bottom-left-radius: 40px;`,
+    },
+    "squircle-b-6xl": {
+      class: "squircle-b-6xl",
+      styles: `--squircle-border-bottom-right-radius: 50px;
+--squircle-border-bottom-left-radius: 50px;`,
+    },
+    "squircle-b-7xl": {
+      class: "squircle-b-7xl",
+      styles: `--squircle-border-bottom-right-radius: 60px;
+--squircle-border-bottom-left-radius: 60px;`,
+    },
+    "squircle-b-full": {
+      class: "squircle-b-full",
+      styles: `--squircle-border-bottom-right-radius: 9999px;
+--squircle-border-bottom-left-radius: 9999px;`,
+    },
+    "squircle-tr-<length | number>": {
+      class: "squircle-tr-<length | number>",
+      styles: "--squircle-border-top-right-radius: <length | number>;",
+    },
+    "squircle-tr-none": {
+      class: "squircle-tr-none",
+      styles: "--squircle-border-top-right-radius: 0;",
+    },
+    "squircle-tr-xs": {
+      class: "squircle-tr-xs",
+      styles: "--squircle-border-top-right-radius: 2px;",
+    },
+    "squircle-tr-sm": {
+      class: "squircle-tr-sm",
+      styles: "--squircle-border-top-right-radius: 4px;",
+    },
+    "squircle-tr-md": {
+      class: "squircle-tr-md",
+      styles: "--squircle-border-top-right-radius: 6px;",
+    },
+    "squircle-tr-lg": {
+      class: "squircle-tr-lg",
+      styles: "--squircle-border-top-right-radius: 8px;",
+    },
+    "squircle-tr-xl": {
+      class: "squircle-tr-xl",
+      styles: "--squircle-border-top-right-radius: 12px;",
+    },
+    "squircle-tr-2xl": {
+      class: "squircle-tr-2xl",
+      styles: "--squircle-border-top-right-radius: 16px;",
+    },
+    "squircle-tr-3xl": {
+      class: "squircle-tr-3xl",
+      styles: "--squircle-border-top-right-radius: 24px;",
+    },
+    "squircle-tr-4xl": {
+      class: "squircle-tr-4xl",
+      styles: "--squircle-border-top-right-radius: 32px;",
+    },
+    "squircle-tr-5xl": {
+      class: "squircle-tr-5xl",
+      styles: "--squircle-border-top-right-radius: 40px;",
+    },
+    "squircle-tr-6xl": {
+      class: "squircle-tr-6xl",
+      styles: "--squircle-border-top-right-radius: 50px;",
+    },
+    "squircle-tr-7xl": {
+      class: "squircle-tr-7xl",
+      styles: "--squircle-border-top-right-radius: 60px;",
+    },
+    "squircle-tr-full": {
+      class: "squircle-tr-full",
+      styles: "--squircle-border-top-right-radius: 9999px;",
+    },
+    "squircle-tl-<length | number>": {
+      class: "squircle-tl-<length | number>",
+      styles: "--squircle-border-top-left-radius: <length | number>;",
+    },
+    "squircle-tl-none": {
+      class: "squircle-tl-none",
+      styles: "--squircle-border-top-left-radius: 0;",
+    },
+    "squircle-tl-xs": {
+      class: "squircle-tl-xs",
+      styles: "--squircle-border-top-left-radius: 2px;",
+    },
+    "squircle-tl-sm": {
+      class: "squircle-tl-sm",
+      styles: "--squircle-border-top-left-radius: 4px;",
+    },
+    "squircle-tl-md": {
+      class: "squircle-tl-md",
+      styles: "--squircle-border-top-left-radius: 6px;",
+    },
+    "squircle-tl-lg": {
+      class: "squircle-tl-lg",
+      styles: "--squircle-border-top-left-radius: 8px;",
+    },
+    "squircle-tl-xl": {
+      class: "squircle-tl-xl",
+      styles: "--squircle-border-top-left-radius: 12px;",
+    },
+    "squircle-tl-2xl": {
+      class: "squircle-tl-2xl",
+      styles: "--squircle-border-top-left-radius: 16px;",
+    },
+    "squircle-tl-3xl": {
+      class: "squircle-tl-3xl",
+      styles: "--squircle-border-top-left-radius: 24px;",
+    },
+    "squircle-tl-4xl": {
+      class: "squircle-tl-4xl",
+      styles: "--squircle-border-top-left-radius: 32px;",
+    },
+    "squircle-tl-5xl": {
+      class: "squircle-tl-5xl",
+      styles: "--squircle-border-top-left-radius: 40px;",
+    },
+    "squircle-tl-6xl": {
+      class: "squircle-tl-6xl",
+      styles: "--squircle-border-top-left-radius: 50px;",
+    },
+    "squircle-tl-7xl": {
+      class: "squircle-tl-7xl",
+      styles: "--squircle-border-top-left-radius: 60px;",
+    },
+    "squircle-tl-full": {
+      class: "squircle-tl-full",
+      styles: "--squircle-border-top-left-radius: 9999px;",
+    },
+    "squircle-br-<length | number>": {
+      class: "squircle-br-<length | number>",
+      styles: "--squircle-border-bottom-right-radius: <length | number>;",
+    },
+    "squircle-br-none": {
+      class: "squircle-br-none",
+      styles: "--squircle-border-bottom-right-radius: 0;",
+    },
+    "squircle-br-xs": {
+      class: "squircle-br-xs",
+      styles: "--squircle-border-bottom-right-radius: 2px;",
+    },
+    "squircle-br-sm": {
+      class: "squircle-br-sm",
+      styles: "--squircle-border-bottom-right-radius: 4px;",
+    },
+    "squircle-br-md": {
+      class: "squircle-br-md",
+      styles: "--squircle-border-bottom-right-radius: 6px;",
+    },
+    "squircle-br-lg": {
+      class: "squircle-br-lg",
+      styles: "--squircle-border-bottom-right-radius: 8px;",
+    },
+    "squircle-br-xl": {
+      class: "squircle-br-xl",
+      styles: "--squircle-border-bottom-right-radius: 12px;",
+    },
+    "squircle-br-2xl": {
+      class: "squircle-br-2xl",
+      styles: "--squircle-border-bottom-right-radius: 16px;",
+    },
+    "squircle-br-3xl": {
+      class: "squircle-br-3xl",
+      styles: "--squircle-border-bottom-right-radius: 24px;",
+    },
+    "squircle-br-4xl": {
+      class: "squircle-br-4xl",
+      styles: "--squircle-border-bottom-right-radius: 32px;",
+    },
+    "squircle-br-5xl": {
+      class: "squircle-br-5xl",
+      styles: "--squircle-border-bottom-right-radius: 40px;",
+    },
+    "squircle-br-6xl": {
+      class: "squircle-br-6xl",
+      styles: "--squircle-border-bottom-right-radius: 50px;",
+    },
+    "squircle-br-7xl": {
+      class: "squircle-br-7xl",
+      styles: "--squircle-border-bottom-right-radius: 60px;",
+    },
+    "squircle-br-full": {
+      class: "squircle-br-full",
+      styles: "--squircle-border-bottom-right-radius: 9999px;",
+    },
+    "squircle-bl-<length | number>": {
+      class: "squircle-bl-<length | number>",
+      styles: "--squircle-border-bottom-left-radius: <length | number>;",
+    },
+    "squircle-bl-none": {
+      class: "squircle-bl-none",
+      styles: "--squircle-border-bottom-left-radius: 0;",
+    },
+    "squircle-bl-xs": {
+      class: "squircle-bl-xs",
+      styles: "--squircle-border-bottom-left-radius: 2px;",
+    },
+    "squircle-bl-sm": {
+      class: "squircle-bl-sm",
+      styles: "--squircle-border-bottom-left-radius: 4px;",
+    },
+    "squircle-bl-md": {
+      class: "squircle-bl-md",
+      styles: "--squircle-border-bottom-left-radius: 6px;",
+    },
+    "squircle-bl-lg": {
+      class: "squircle-bl-lg",
+      styles: "--squircle-border-bottom-left-radius: 8px;",
+    },
+    "squircle-bl-xl": {
+      class: "squircle-bl-xl",
+      styles: "--squircle-border-bottom-left-radius: 12px;",
+    },
+    "squircle-bl-2xl": {
+      class: "squircle-bl-2xl",
+      styles: "--squircle-border-bottom-left-radius: 16px;",
+    },
+    "squircle-bl-3xl": {
+      class: "squircle-bl-3xl",
+      styles: "--squircle-border-bottom-left-radius: 24px;",
+    },
+    "squircle-bl-4xl": {
+      class: "squircle-bl-4xl",
+      styles: "--squircle-border-bottom-left-radius: 32px;",
+    },
+    "squircle-bl-5xl": {
+      class: "squircle-bl-5xl",
+      styles: "--squircle-border-bottom-left-radius: 40px;",
+    },
+    "squircle-bl-6xl": {
+      class: "squircle-bl-6xl",
+      styles: "--squircle-border-bottom-left-radius: 50px;",
+    },
+    "squircle-bl-7xl": {
+      class: "squircle-bl-7xl",
+      styles: "--squircle-border-bottom-left-radius: 60px;",
+    },
+    "squircle-bl-full": {
+      class: "squircle-bl-full",
+      styles: "--squircle-border-bottom-left-radius: 9999px;",
+    },
+  }}
+/>
+
+<Callout type="info">
+  Other values than px such as rem, em, vh, vw, etc. are not supported.
+</Callout>
+
+## Usage
+
+```tsx
+<div className="squircle-xl" />
+```
+
+You can also customize individual corners.
+
+```tsx
+<div className="squircle-tl-xl squircle-br-md" />
+```
+
+You can also use a custom radius.
+
+```tsx
+<div className="squircle-20" />
+```
