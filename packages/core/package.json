@@ -1,6 +1,6 @@
 {
   "name": "@squircle/core",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "homepage": "https://squircle.skyleen.dev",
   "author": "Skyleen",
   "description": "A library for creating beautiful squircles in CSS, offering full customization and seamless integration as well as Tailwind CSS integration.",
